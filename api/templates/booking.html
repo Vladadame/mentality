@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись к психологу</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+        }
+
+        .slots {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .slot-btn {
+            border: 1px solid #ccc;
+            background: white;
+            padding: 12px 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .slot-btn.active {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .form-block {
+            display: grid;
+            gap: 12px;
+            max-width: 400px;
+        }
+
+        input, button {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Онлайн-запись на консультацию</h1>
+
+    <div>
+        <h2>Выберите слот</h2>
+        <div id="slots" class="slots"></div>
+    </div>
+
+    <div class="form-block">
+        <input id="name" type="text" placeholder="Ваше имя">
+        <input id="phone" type="text" placeholder="Телефон">
+        <button id="bookBtn">Забронировать и перейти к оплате</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <script src="/static/booking.js"></script>
+</body>
+</html>
